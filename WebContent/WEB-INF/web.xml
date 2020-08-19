@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>BiddingApp</display-name>
+
+
+	<servlet>
+		<servlet-name>StartUpServlet</servlet-name>
+		<servlet-class>com.biddingapp.servlet.StartupServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>user</servlet-name>
+		<servlet-class>com.biddingapp.servlet.UserServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>user</servlet-name>
+		<url-pattern>/user</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>manageDF</servlet-name>
+		<servlet-class>com.biddingapp.servlet.ManageDFServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>manageDF</servlet-name>
+		<url-pattern>/manageDF</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Products</servlet-name>
+		<servlet-class>com.biddingapp.servlet.ProductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Products</servlet-name>
+		<url-pattern>/products</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>Feedback</servlet-name>
+		<servlet-class>com.biddingapp.servlet.FeedbackServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Feedback</servlet-name>
+		<url-pattern>/feedback</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>Bid</servlet-name>
+		<servlet-class>com.biddingapp.servlet.BidServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Bid</servlet-name>
+		<url-pattern>/bid</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>orders</servlet-name>
+		<servlet-class>com.biddingapp.servlet.OrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>orders</servlet-name>
+		<url-pattern>/orders</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>membership</servlet-name>
+		<servlet-class>com.biddingapp.servlet.MembershipServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>membership</servlet-name>
+		<url-pattern>/membership</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>discussions</servlet-name>
+		<servlet-class>com.biddingapp.servlet.DiscussionsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>discussions</servlet-name>
+		<url-pattern>/discussions</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
